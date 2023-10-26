@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scam Warning</title>
+  </head>
+  <body>
+    <img
+      id="scamImage"
+      src="https://miro.medium.com/max/1400/1*mdcu3Ku9r44HMtraHUqu5g.jpeg"
+      alt="Scam Warning"
+    />
+  </body>
+  <script>
+    const image = document.getElementById("scamImage");
+
+    image.onclick = function() {
+      const confirmRedirect = confirm(
+        "The website you are going to visit may harm your computer. Do you still want to redirect?"
+      );
+    };
+  </script>
+</html>
+
+
+
+
+
+
+
+<!-- //   if (confirmRedirect) {
+    //     alert("You will be redirected to the website.");
+    //   } else {
+    //     alert("You have chosen not to redirect.");
+    //   } -->
