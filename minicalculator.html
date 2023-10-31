@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <style>
+      #operator{
+        margin-top: 30px;
+       text-align: center;
+       }
+       #box{
+        text-align: center;
+        margin-top: 100px;
+       }
+
+    </style>
+</head>
+<body>
+    <h1 id="Dispy"></h1>
+   <div id="box">
+    <input type="Number1" id="inp1" placeholder="Enter 1ST Number">
+    <input type="Number2" id="inp2" placeholder="Enter 2nd Number">
+   </div>
+
+     <div id="operator">
+     <button id="1">Add</button>
+     <BUtton id="2">Subtract</BUtton>
+     <BUtton id="3">Multiply</BUtton>
+     <button id="4">Divide</button>
+     </div>
+</body>
+<script>
+    // let operatorButton = document.querySelectorAll('#operator > button')
+  
+
+    let addButton = document.getElementById('1')
+    let subButton = document.getElementById('2')
+    let mulButton = document.getElementById('3')
+    let divButton = document.getElementById('4')
+
+    addButton.addEventListener('click',function(){
+        alert(Number(inp1.value)+Number(inp2.value))
+    })
+
+    subButton.addEventListener('click',function(){
+        alert(Number(inp1.value)-Number(inp2.value))
+    })
+
+    mulButton.addEventListener('click',function(){
+        alert(Number(inp1.value)*Number(inp2.value))
+    })
+
+    divButton.addEventListener('click',function(){
+        alert(Number(inp1.value)/Number(inp2.value))
+    })
+
+
+
+
+
+   
+</script>
+</html>
