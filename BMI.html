@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>BMI Calculator</h1>
+    <input placeholder="Height" type="number" id="height" />
+    <input placeholder="Weight" type="number" id="weight" />
+    <button id="calculate">Calculate</button>
+    <h1>
+      Your BMI is:- <span id="bmi"></span>, that means you are
+      <span id="status"></span>
+    </h1>
+  </body>
+  <script>
+    let height1 = document.getElementById("height")
+    let weight1 = document.getElementById("weight")
+    let submit = document.querySelector("#calculate")
+    let x= document.querySelectorAll("h1")
+
+    submit.addEventListener("click", function(){
+      let bmi= weight.value/(height.value**2);
+       x[1].innerText=bmi
+    })
+  </script>
+</html>
