@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masai Games</title>
+  </head>
+  <body>
+    <div id="min"></div>
+    <div id="max"></div>
+    <div id="score">
+    </div>
+    <div id="keypad">
+      <button>0</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+    </div>
+    <button id="enter">ENTER</button>
+  </body>
+  <script>
+     let x = document.querySelectorAll("button");
+     let sdisplay = document.getElementById("score")
+     let enter = document.getElementById("enter");
+     let min = document.getElementById("min")
+     let max = document.getElementById("max")
+     let score=""
+
+     for(let i=0; i<10; i++){
+      x[i].addEventListener("click",function(){
+        score+= x[i].innerText
+        console.log(score)
+        sdisplay.innerText= score
+      })
+     }
+     enter.addEventListener("click",function(){
+      if(min.innerText === "" && max.innerText === ""){
+        min.innerText = score
+        max.innerText = score
+      }
+      if(score > max.innerText){
+        max.innerText=score
+      }
+      else if(score < min.innerText){
+        min.innerText= score
+      }
+      score =""
+     })
+  </script>
+</html>
